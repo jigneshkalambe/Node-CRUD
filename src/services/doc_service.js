@@ -12,8 +12,13 @@ const delete_doc_s = (id) => {
     return Doc.findByIdAndDelete(id);
 };
 
+const update_Doc = (id, data) => {
+    return Doc.findByIdAndUpdate(id, data);
+};
+
 module.exports = {
     create_doc_s,
     get_doc_s,
     delete_doc_s,
+    update_Doc,
 };

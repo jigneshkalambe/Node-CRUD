@@ -62,8 +62,33 @@ const delete_doc = async (req, res) => {
     }
 };
 
+const update_doc = async (req, res) => {
+    try {
+        const id = req.body.id;
+        const data = req.body;
+        const newDoc = await doc_Service.update_Doc(id, data);
+
+        if (!newDoc) {
+            throw new Error("Admin isnt updated");
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Admin updated successfully",
+            id,
+            data,
+        });
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+    }
+};
+
 module.exports = {
     create_doc_c,
     get_doc_data,
     delete_doc,
+    update_doc,
 };
