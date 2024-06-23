@@ -8,4 +8,12 @@ const get_admin = () => {
     return Admin.find();
 };
 
-module.exports = { create_admin_S, get_admin };
+const delete_Admin = (id) => {
+    return Admin.findByIdAndDelete(id);
+};
+
+const update_Admin = (id, data) => {
+    return Admin.findByIdAndUpdate(id, data);
+};
+
+module.exports = { create_admin_S, get_admin, delete_Admin, update_Admin };
