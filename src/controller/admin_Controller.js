@@ -64,7 +64,6 @@ const update_admin = async (req, res) => {
     try {
         const id = req.body.id;
         const data = req.body;
-        // console.log("ID", id, "DATA", data);
         const newAdmin = await admin_Service.update_Admin(id, data);
 
         if (!newAdmin) {
