@@ -5,3 +5,6 @@ module.exports.Series = require("./series_model");
 module.exports.Music = require("./music_model");
 module.exports.Book = require("./book_model");
 module.exports.Doc = require("./doc_modal");
+module.exports.Content = require("./content_model");
+module.exports.Topic = require("./topic_model");
+module.exports.Producer = require("./producer_model");

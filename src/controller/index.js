@@ -5,3 +5,6 @@ module.exports.music_Controller = require("./music_controller");
 module.exports.user_Controller = require("./user_controller");
 module.exports.book_Controller = require("./book_controller");
 module.exports.doc_Controller = require("./doc_controller");
+module.exports.content_Controller = require("./content_controller");
+module.exports.topic_Controller = require("./topic_controller");
+module.exports.producer_Controller = require("./producer_controller");

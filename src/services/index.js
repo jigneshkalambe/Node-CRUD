@@ -5,3 +5,5 @@ module.exports.music_Service = require("./music_service");
 module.exports.user_Service = require("./user_service");
 module.exports.book_Service = require("./book_service");
 module.exports.doc_Service = require("./doc_service");
+module.exports.content_Service = require("./content_service");
+module.exports.topic_Service = require("./topic_service");
