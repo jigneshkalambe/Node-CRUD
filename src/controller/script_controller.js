@@ -1,15 +1,15 @@
-const { user_Service } = require("../services");
+const { script_Service } = require("../services");
 
-const create_User = async (req, res) => {
+const create_Script = async (req, res) => {
     try {
         const data = req.body;
-        const newUser = await user_Service.user_service_post(data);
-        if (!newUser) {
-            throw new Error("User isnt created");
+        const newScript = await script_Service.script_service_post(data);
+        if (!newScript) {
+            throw new Error("Script isnt created");
         }
         res.status(200).json({
             success: true,
-            message: newUser,
+            data: newScript,
         });
     } catch (error) {
         res.status(400).json({
@@ -19,15 +19,15 @@ const create_User = async (req, res) => {
     }
 };
 
-const get_User = async (req, res) => {
+const get_Script = async (req, res) => {
     try {
-        const newUser = await user_Service.user_service_get();
-        if (!newUser) {
-            throw new Error("User isnt created");
+        const newScript = await script_Service.script_service_get();
+        if (!newScript) {
+            throw new Error("Script isnt created");
         }
         res.status(200).json({
             success: true,
-            message: newUser,
+            data: newScript,
         });
     } catch (error) {
         res.status(400).json({
@@ -37,18 +37,18 @@ const get_User = async (req, res) => {
     }
 };
 
-const delete_User = async (req, res) => {
+const delete_Script = async (req, res) => {
     try {
         const id = req.body.id;
-        const newUser = await user_Service.user_service_delete(id);
+        const newScript = await script_Service.script_service_delete(id);
 
-        if (!newUser) {
-            throw new Error("User isnt deleted");
+        if (!newScript) {
+            throw new Error("Script isnt deleted");
         }
 
         res.status(200).json({
             success: true,
-            message: "User deleted successfully",
+            message: "Script deleted successfully",
             id,
         });
     } catch (error) {
@@ -59,19 +59,19 @@ const delete_User = async (req, res) => {
     }
 };
 
-const update_User = async (req, res) => {
+const update_Script = async (req, res) => {
     try {
         const id = req.body.id;
         const data = req.body;
-        const newUser = await user_Service.user_service_update(id, data);
+        const newScript = await script_Service.script_service_update(id, data);
 
-        if (!newUser) {
-            throw new Error("User isnt updated");
+        if (!newScript) {
+            throw new Error("Script isnt updated");
         }
 
         res.status(200).json({
             success: true,
-            message: "User updated successfully",
+            message: "Script updated successfully",
             id,
             data,
         });
@@ -83,4 +83,4 @@ const update_User = async (req, res) => {
     }
 };
 
-module.exports = { create_User, get_User, delete_User, update_User };
+module.exports = { create_Script, get_Script, delete_Script, update_Script };

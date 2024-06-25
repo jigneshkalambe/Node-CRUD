@@ -21,6 +21,9 @@ const reviewRoutes = require("./review_routes");
 const awardRoutes = require("./award_routes");
 const trailerRoutes = require("./trailer_routes");
 const fanArtRoutes = require("./fanArt_routes");
+const deviceRoutes = require("./device_routes");
+const playlistRoutes = require("./playlist_routes");
+const scriptRoutes = require("./script_routes");
 
 router.use("/user", userRoute);
 router.use("/movies", movieRoute);
@@ -42,5 +45,8 @@ router.use("/review", reviewRoutes);
 router.use("/award", awardRoutes);
 router.use("/trailer", trailerRoutes);
 router.use("fanArt", fanArtRoutes);
+router.use("/device", deviceRoutes);
+router.use("/playlist", playlistRoutes);
+router.use("/script", scriptRoutes);
 
 module.exports = router;

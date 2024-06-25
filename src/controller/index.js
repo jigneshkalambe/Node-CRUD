@@ -18,3 +18,6 @@ module.exports.review_Controller = require("./review_controller");
 module.exports.award_Controller = require("./award_controller");
 module.exports.trailer_Controller = require("./trailer_controller");
 module.exports.fanArt_Controller = require("./fanArt_controller");
+module.exports.device_Controller = require("./device_controller");
+module.exports.playlist_Controller = require("./playlist_controller");
+module.exports.script_Controller = require("./script_controller");

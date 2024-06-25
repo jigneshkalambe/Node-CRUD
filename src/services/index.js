@@ -18,3 +18,6 @@ module.exports.review_Serviec = require("./review_service");
 module.exports.award_Serviec = require("./award_service");
 module.exports.trailer_Service = require("./trailer_service");
 module.exports.fanArt_Service = require("./fanArt_service");
+module.exports.device_Service = require("./device_service");
+module.exports.playlist_Service = require("./playlist_service");
+module.exports.script_Service = require("./script_service");

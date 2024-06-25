@@ -18,3 +18,6 @@ module.exports.Review = require("./review_model");
 module.exports.Award = require("./award_model");
 module.exports.Trailer = require("./trailer_model");
 module.exports.FanArt = require("./fanArt_model");
+module.exports.Device = require("./device_model");
+module.exports.Playlist = require("./playlist_model");
+module.exports.Script = require("./script_model");

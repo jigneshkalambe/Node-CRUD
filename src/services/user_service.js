@@ -1,11 +1,24 @@
 const { User } = require("../model");
 
-const get_user_service = (data) => {
+const user_service_post = (data) => {
     return User.create(data);
 };
 
-const get_user_service_get = () => {
+const user_service_get = () => {
     return User.find();
 };
 
-module.exports = { get_user_service, get_user_service_get };
+const user_service_delete = (id) => {
+    return User.findByIdAndDelete(id);
+};
+
+const user_service_update = (id, data) => {
+    return User.findByIdAndUpdate(id, data);
+};
+
+module.exports = {
+    user_service_post,
+    user_service_get,
+    user_service_delete,
+    user_service_update,
+};

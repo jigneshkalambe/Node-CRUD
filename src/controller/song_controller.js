@@ -9,7 +9,7 @@ const create_Song = async (req, res) => {
         }
         res.status(200).json({
             success: true,
-            message: newSong,
+            data: newSong,
         });
     } catch (error) {
         res.status(400).json({
@@ -27,7 +27,7 @@ const get_Song = async (req, res) => {
         }
         res.status(200).json({
             success: true,
-            message: newSong,
+            data: newSong,
         });
     } catch (error) {
         res.status(400).json({
