@@ -9,3 +9,7 @@ module.exports.content_Service = require("./content_service");
 module.exports.topic_Service = require("./topic_service");
 module.exports.producer_Service = require("./producer_service");
 module.exports.item_Service = require("./item_service");
+module.exports.song_Service = require("./song_service");
+module.exports.van_Service = require("./van_service");
+module.exports.directors_Service = require("./directors_service");
+module.exports.actor_Service = require("./actor_service");
