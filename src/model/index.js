@@ -8,3 +8,4 @@ module.exports.Doc = require("./doc_modal");
 module.exports.Content = require("./content_model");
 module.exports.Topic = require("./topic_model");
 module.exports.Producer = require("./producer_model");
+module.exports.Item = require("./item_model");

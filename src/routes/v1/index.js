@@ -11,6 +11,7 @@ const docRoute = require("./doc_routes");
 const conRoute = require("./content_routes");
 const topicRoute = require("./topic_routes");
 const prodRoute = require("./producer_routes");
+const itemRoute = require("./item_routes");
 
 router.use("/user", userRoute);
 router.use("/movies", movieRoute);
@@ -22,5 +23,6 @@ router.use("/doc", docRoute);
 router.use("/content", conRoute);
 router.use("/topic", topicRoute);
 router.use("/producer", prodRoute);
+router.use("/item", itemRoute);
 
 module.exports = router;

@@ -7,3 +7,5 @@ module.exports.book_Service = require("./book_service");
 module.exports.doc_Service = require("./doc_service");
 module.exports.content_Service = require("./content_service");
 module.exports.topic_Service = require("./topic_service");
+module.exports.producer_Service = require("./producer_service");
+module.exports.item_Service = require("./item_service");
