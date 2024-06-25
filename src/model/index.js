@@ -14,3 +14,7 @@ module.exports.Van = require("./van_model");
 module.exports.Directors = require("./directors_model");
 module.exports.Actor = require("./actor_model");
 module.exports.Genre = require("./genres_model");
+module.exports.Review = require("./review_model");
+module.exports.Award = require("./award_model");
+module.exports.Trailer = require("./trailer_model");
+module.exports.FanArt = require("./fanArt_model");

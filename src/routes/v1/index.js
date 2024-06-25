@@ -17,6 +17,10 @@ const vanRoute = require("./van_routes");
 const directorsRoute = require("./directors_routes");
 const actorRoutes = require("./actor_routes");
 const genreRoutes = require("./genre_routes");
+const reviewRoutes = require("./review_routes");
+const awardRoutes = require("./award_routes");
+const trailerRoutes = require("./trailer_routes");
+const fanArtRoutes = require("./fanArt_routes");
 
 router.use("/user", userRoute);
 router.use("/movies", movieRoute);
@@ -34,5 +38,9 @@ router.use("/van", vanRoute);
 router.use("/directors", directorsRoute);
 router.use("/actor", actorRoutes);
 router.use("/genre", genreRoutes);
+router.use("/review", reviewRoutes);
+router.use("/award", awardRoutes);
+router.use("/trailer", trailerRoutes);
+router.use("fanArt", fanArtRoutes);
 
 module.exports = router;

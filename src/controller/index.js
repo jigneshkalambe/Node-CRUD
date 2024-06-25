@@ -14,3 +14,7 @@ module.exports.van_Controller = require("./van_controller");
 module.exports.directors_Controller = require("./directors_controller");
 module.exports.actor_Controller = require("./actor_controller");
 module.exports.genre_Controller = require("./genre_controller");
+module.exports.review_Controller = require("./review_controller");
+module.exports.award_Controller = require("./award_controller");
+module.exports.trailer_Controller = require("./trailer_controller");
+module.exports.fanArt_Controller = require("./fanArt_controller");
