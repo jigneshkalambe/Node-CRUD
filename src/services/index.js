@@ -21,3 +21,5 @@ module.exports.fanArt_Service = require("./fanArt_service");
 module.exports.device_Service = require("./device_service");
 module.exports.playlist_Service = require("./playlist_service");
 module.exports.script_Service = require("./script_service");
+module.exports.crew_Service = require("./crew_service");
+module.exports.prop_Service = require("./prop_service");

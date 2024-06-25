@@ -24,6 +24,8 @@ const fanArtRoutes = require("./fanArt_routes");
 const deviceRoutes = require("./device_routes");
 const playlistRoutes = require("./playlist_routes");
 const scriptRoutes = require("./script_routes");
+const crewRoutes = require("./crew_routes");
+const propRoutes = require("./prop_routes");
 
 router.use("/user", userRoute);
 router.use("/movies", movieRoute);
@@ -48,5 +50,7 @@ router.use("fanArt", fanArtRoutes);
 router.use("/device", deviceRoutes);
 router.use("/playlist", playlistRoutes);
 router.use("/script", scriptRoutes);
+router.use("/crew", crewRoutes);
+router.use("/prop", propRoutes);
 
 module.exports = router;

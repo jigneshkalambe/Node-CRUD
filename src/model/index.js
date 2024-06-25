@@ -21,3 +21,5 @@ module.exports.FanArt = require("./fanArt_model");
 module.exports.Device = require("./device_model");
 module.exports.Playlist = require("./playlist_model");
 module.exports.Script = require("./script_model");
+module.exports.Crew = require("./crew_model");
+module.exports.Prop = require("./prop_model");
