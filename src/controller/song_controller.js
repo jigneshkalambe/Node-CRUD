@@ -1,15 +1,15 @@
-const { user_Service } = require("../services");
+const { song_Service } = require("../services");
 
-const create_User = async (req, res) => {
+const create_Song = async (req, res) => {
     try {
         const data = req.body;
-        const newUser = await user_Service.user_service_post(data);
-        if (!newUser) {
-            throw new Error("User isnt created");
+        const newSong = await song_Service.song_service_post(data);
+        if (!newSong) {
+            throw new Error("Song isnt created");
         }
         res.status(200).json({
             success: true,
-            message: newUser,
+            data: newSong,
         });
     } catch (error) {
         res.status(400).json({
@@ -19,15 +19,15 @@ const create_User = async (req, res) => {
     }
 };
 
-const get_User = async (req, res) => {
+const get_Song = async (req, res) => {
     try {
-        const newUser = await user_Service.user_service_get();
-        if (!newUser) {
-            throw new Error("User isnt created");
+        const newSong = await song_Service.song_service_get();
+        if (!newSong) {
+            throw new Error("Song isnt created");
         }
         res.status(200).json({
             success: true,
-            message: newUser,
+            data: newSong,
         });
     } catch (error) {
         res.status(400).json({
@@ -37,18 +37,18 @@ const get_User = async (req, res) => {
     }
 };
 
-const delete_User = async (req, res) => {
+const delete_Song = async (req, res) => {
     try {
         const id = req.body.id;
-        const newUser = await user_Service.user_service_delete(id);
+        const newSong = await song_Service.song_service_delete(id);
 
-        if (!newUser) {
-            throw new Error("User isnt deleted");
+        if (!newSong) {
+            throw new Error("Song isnt deleted");
         }
 
         res.status(200).json({
             success: true,
-            message: "User deleted successfully",
+            message: "Song deleted successfully",
             id,
         });
     } catch (error) {
@@ -59,19 +59,19 @@ const delete_User = async (req, res) => {
     }
 };
 
-const update_User = async (req, res) => {
+const update_Song = async (req, res) => {
     try {
         const id = req.body.id;
         const data = req.body;
-        const newUser = await user_Service.user_service_update(id, data);
+        const newSong = await song_Service.song_service_update(id, data);
 
-        if (!newUser) {
-            throw new Error("User isnt updated");
+        if (!newSong) {
+            throw new Error("Song isnt updated");
         }
 
         res.status(200).json({
             success: true,
-            message: "User updated successfully",
+            message: "Song updated successfully",
             id,
             data,
         });
@@ -83,4 +83,4 @@ const update_User = async (req, res) => {
     }
 };
 
-module.exports = { create_User, get_User, delete_User, update_User };
+module.exports = { create_Song, get_Song, delete_Song, update_Song };

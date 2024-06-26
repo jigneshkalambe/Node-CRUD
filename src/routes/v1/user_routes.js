@@ -1,17 +1,11 @@
 const express = require("express");
 const { user_Controller } = require("../../controller");
-const router = express.Router();
-router.get(
-    "/end_point",
-    //      (req, res) => {
-    //     res.status(200).json({
-    //         success: true,
-    //         message: "ROUTE GOT HITTED",
-    //     });
-    // }
-    user_Controller.get_user_c
-);
 
-router.post("/user_end", user_Controller.create_user_c);
+const router = express.Router();
+
+router.post("/create_User", user_Controller.create_User);
+router.get("/get_User", user_Controller.get_User);
+router.delete("/delete_User", user_Controller.delete_User);
+router.put("/update_User", user_Controller.update_User);
 
 module.exports = router;

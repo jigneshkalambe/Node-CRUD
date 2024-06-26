@@ -1,17 +1,15 @@
 const { series_Service } = require("../services");
 
-const series_controller_c = async (req, res) => {
+const create_Series = async (req, res) => {
     try {
-        const body = req.body;
-        const newSeries = await series_Service.series_service_s(body);
-
+        const data = req.body;
+        const newSeries = await series_Service.series_service_post(data);
         if (!newSeries) {
-            throw new Error("!!Series");
+            throw new Error("Series isnt created");
         }
-
         res.status(200).json({
             success: true,
-            data: newSeries,
+            message: newSeries,
         });
     } catch (error) {
         res.status(400).json({
@@ -21,15 +19,15 @@ const series_controller_c = async (req, res) => {
     }
 };
 
-const get_series = async (req, res) => {
+const get_Series = async (req, res) => {
     try {
-        const newSeries = await series_Service.getSeries();
+        const newSeries = await series_Service.series_service_get();
         if (!newSeries) {
-            throw new Error("!!Series");
+            throw new Error("Series isnt created");
         }
         res.status(200).json({
             success: true,
-            data: newSeries,
+            message: newSeries,
         });
     } catch (error) {
         res.status(400).json({
@@ -39,4 +37,50 @@ const get_series = async (req, res) => {
     }
 };
 
-module.exports = { series_controller_c, get_series };
+const delete_Series = async (req, res) => {
+    try {
+        const id = req.body.id;
+        const newSeries = await series_Service.series_service_delete(id);
+
+        if (!newSeries) {
+            throw new Error("Series isnt deleted");
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Series deleted successfully",
+            id,
+        });
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+    }
+};
+
+const update_Series = async (req, res) => {
+    try {
+        const id = req.body.id;
+        const data = req.body;
+        const newSeries = await series_Service.series_service_update(id, data);
+
+        if (!newSeries) {
+            throw new Error("Series isnt updated");
+        }
+
+        res.status(200).json({
+            success: true,
+            message: "Series updated successfully",
+            id,
+            data,
+        });
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+    }
+};
+
+module.exports = { create_Series, get_Series, delete_Series, update_Series };

@@ -1,15 +1,15 @@
-const { user_Service } = require("../services");
+const { fanArt_Service } = require("../services");
 
-const create_User = async (req, res) => {
+const create_FanArt = async (req, res) => {
     try {
         const data = req.body;
-        const newUser = await user_Service.user_service_post(data);
-        if (!newUser) {
-            throw new Error("User isnt created");
+        const newFanArt = await fanArt_Service.fanArt_service_post(data);
+        if (!newFanArt) {
+            throw new Error("FanArt isnt created");
         }
         res.status(200).json({
             success: true,
-            message: newUser,
+            data: newFanArt,
         });
     } catch (error) {
         res.status(400).json({
@@ -19,15 +19,15 @@ const create_User = async (req, res) => {
     }
 };
 
-const get_User = async (req, res) => {
+const get_FanArt = async (req, res) => {
     try {
-        const newUser = await user_Service.user_service_get();
-        if (!newUser) {
-            throw new Error("User isnt created");
+        const newFanArt = await fanArt_Service.fanArt_service_get();
+        if (!newFanArt) {
+            throw new Error("FanArt isnt created");
         }
         res.status(200).json({
             success: true,
-            message: newUser,
+            data: newFanArt,
         });
     } catch (error) {
         res.status(400).json({
@@ -37,18 +37,18 @@ const get_User = async (req, res) => {
     }
 };
 
-const delete_User = async (req, res) => {
+const delete_FanArt = async (req, res) => {
     try {
         const id = req.body.id;
-        const newUser = await user_Service.user_service_delete(id);
+        const newFanArt = await fanArt_Service.fanArt_service_delete(id);
 
-        if (!newUser) {
-            throw new Error("User isnt deleted");
+        if (!newFanArt) {
+            throw new Error("FanArt isnt deleted");
         }
 
         res.status(200).json({
             success: true,
-            message: "User deleted successfully",
+            message: "FanArt deleted successfully",
             id,
         });
     } catch (error) {
@@ -59,19 +59,19 @@ const delete_User = async (req, res) => {
     }
 };
 
-const update_User = async (req, res) => {
+const update_FanArt = async (req, res) => {
     try {
         const id = req.body.id;
         const data = req.body;
-        const newUser = await user_Service.user_service_update(id, data);
+        const newFanArt = await fanArt_Service.fanArt_service_update(id, data);
 
-        if (!newUser) {
-            throw new Error("User isnt updated");
+        if (!newFanArt) {
+            throw new Error("FanArt isnt updated");
         }
 
         res.status(200).json({
             success: true,
-            message: "User updated successfully",
+            message: "FanArt updated successfully",
             id,
             data,
         });
@@ -83,4 +83,4 @@ const update_User = async (req, res) => {
     }
 };
 
-module.exports = { create_User, get_User, delete_User, update_User };
+module.exports = { create_FanArt, get_FanArt, delete_FanArt, update_FanArt };
