@@ -3,7 +3,7 @@ const { item_Service } = require("../services");
 const create_Item = async (req, res) => {
     try {
         const data = req.body;
-        newItem = await item_Service.item_service_post(data);
+        const newItem = await item_Service.item_service_post(data);
         if (!newItem) {
             throw new Error("Item isnt created");
         }
