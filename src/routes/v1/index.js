@@ -26,6 +26,7 @@ const playlistRoutes = require("./playlist_routes");
 const scriptRoutes = require("./script_routes");
 const crewRoutes = require("./crew_routes");
 const propRoutes = require("./prop_routes");
+const carRoutes = require("./car_routes");
 
 router.use("/user", userRoute);
 router.use("/movies", movieRoute);
@@ -52,5 +53,6 @@ router.use("/playlist", playlistRoutes);
 router.use("/script", scriptRoutes);
 router.use("/crew", crewRoutes);
 router.use("/prop", propRoutes);
+router.use("/car", carRoutes);
 
 module.exports = router;

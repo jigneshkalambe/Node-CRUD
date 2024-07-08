@@ -23,3 +23,4 @@ module.exports.playlist_Controller = require("./playlist_controller");
 module.exports.script_Controller = require("./script_controller");
 module.exports.crew_Controller = require("./crew_controller");
 module.exports.prop_Controller = require("./prop_controller");
+module.exports.car_Controller = require("./car_controller");

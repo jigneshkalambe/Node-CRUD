@@ -23,3 +23,4 @@ module.exports.playlist_Service = require("./playlist_service");
 module.exports.script_Service = require("./script_service");
 module.exports.crew_Service = require("./crew_service");
 module.exports.prop_Service = require("./prop_service");
+module.exports.car_Service = require("./car_service");

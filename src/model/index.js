@@ -23,3 +23,4 @@ module.exports.Playlist = require("./playlist_model");
 module.exports.Script = require("./script_model");
 module.exports.Crew = require("./crew_model");
 module.exports.Prop = require("./prop_model");
+module.exports.Car = require("./car_model");
